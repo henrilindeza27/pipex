@@ -6,7 +6,7 @@
 /*   By: hlindeza <hlindeza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 11:43:29 by hlindeza          #+#    #+#             */
-/*   Updated: 2023/04/12 11:43:30 by hlindeza         ###   ########.fr       */
+/*   Updated: 2023/10/29 16:03:34 by hlindeza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ static char	*ft_word(char *str, char charset)
 	i = 0;
 	len_word = ft_wordlen(str, charset);
 	word = (char *)malloc(sizeof(char) * (len_word + 1));
+	if (!word)
+		return (NULL);
 	while (i < len_word)
 	{
 		word[i] = str[i];
